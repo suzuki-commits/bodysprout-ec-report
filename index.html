@@ -1,0 +1,1925 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>
+      株式会社ボディスプラウト様 EC事業 売上最大化の論点整理｜株式会社コミクス
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Noto+Sans+JP:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #221714;
+        --text: #2f2a28;
+        --blue: #0068b6;
+        --blue-deep: #004e8a;
+        --blue-wash: #eef5fb;
+        --verm: #fb4113;
+        --verm-deep: #c9300a;
+        --verm-wash: #fff2ec;
+        --paper: #ffffff;
+        --band: #f5f6f7;
+        --line: #d1d3d7;
+        --note: #4b4643;
+        --display:
+          "Zen Kaku Gothic New", "Noto Sans JP", "Hiragino Sans", "Yu Gothic",
+          sans-serif;
+        --body:
+          "Noto Sans JP", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+        --num: "Barlow Condensed", "Zen Kaku Gothic New", sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--text);
+        font-family: var(--body);
+        font-size: 17px;
+        line-height: 1.9;
+        overflow-x: hidden;
+      }
+      a {
+        color: var(--blue-deep);
+        text-underline-offset: 3px;
+      }
+      a:focus-visible,
+      button:focus-visible,
+      input:focus-visible {
+        outline: 3px solid var(--verm);
+        outline-offset: 3px;
+      }
+      p {
+        margin: 0 0 1em;
+      }
+      strong {
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .wrap {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* 背骨ナビ：ページを貫く1本の軸。現在地の節だけ色が付く */
+      .spine {
+        display: none;
+      }
+      @media (min-width: 1460px) {
+        .spine {
+          display: block;
+          position: fixed;
+          left: 28px;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 5;
+        }
+        .spine ol {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          position: relative;
+        }
+        .spine ol::before {
+          content: "";
+          position: absolute;
+          left: 6px;
+          top: 8px;
+          bottom: 8px;
+          width: 2px;
+          background: var(--line);
+        }
+        .spine li {
+          position: relative;
+          margin: 0;
+          padding: 0;
+        }
+        .spine a {
+          display: block;
+          padding: 9px 0 9px 28px;
+          font-size: 15px;
+          line-height: 1.4;
+          color: var(--note);
+          text-decoration: none;
+          font-weight: 500;
+        }
+        .spine a::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 50%;
+          width: 14px;
+          height: 8px;
+          margin-top: -4px;
+          border-radius: 4px;
+          background: var(--paper);
+          border: 2px solid var(--line);
+        }
+        .spine a[aria-current="true"] {
+          color: var(--ink);
+          font-weight: 700;
+        }
+        .spine a[aria-current="true"]::before {
+          background: var(--blue);
+          border-color: var(--blue);
+        }
+        .spine a:hover {
+          color: var(--blue-deep);
+        }
+      }
+
+      /* ヘッダー */
+      .top {
+        border-bottom: 1px solid var(--line);
+      }
+      .top .wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        font-size: 16px;
+        color: var(--note);
+      }
+      .top b {
+        color: var(--ink);
+        font-family: var(--display);
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      /* ヒーロー */
+      .hero {
+        padding: 64px 0 56px;
+      }
+      .hero .to {
+        font-size: 17px;
+        color: var(--ink);
+        font-weight: 700;
+        margin: 0 0 20px;
+        padding-left: 14px;
+        border-left: 4px solid var(--blue);
+      }
+      .hero h1 {
+        font-family: var(--display);
+        font-weight: 900;
+        color: var(--ink);
+        font-size: clamp(30px, 4.6vw, 52px);
+        line-height: 1.28;
+        letter-spacing: 0.01em;
+        margin: 0 0 24px;
+      }
+      .hero h1 em {
+        font-style: normal;
+        color: var(--blue);
+      }
+      .hero .lead {
+        font-size: 19px;
+        max-width: 44em;
+        margin: 0;
+      }
+
+      /* 掛け算の式 */
+      .formula {
+        margin-top: 48px;
+        border: 2px solid var(--ink);
+        border-radius: 14px;
+        padding: 28px 28px 24px;
+        background: var(--paper);
+      }
+      .formula h2 {
+        font-family: var(--display);
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--ink);
+        margin: 0 0 6px;
+        line-height: 1.5;
+      }
+      .formula > p {
+        margin: 0 0 22px;
+      }
+      .levers {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+      }
+      .lever {
+        background: var(--blue-wash);
+        border-radius: 10px;
+        padding: 16px 16px 14px;
+        position: relative;
+      }
+      .lever + .lever::before {
+        content: "×";
+        position: absolute;
+        left: -14px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-family: var(--num);
+        font-family: var(--body);
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--ink);
+        width: 22px;
+        text-align: center;
+        background: var(--paper);
+        border-radius: 50%;
+        line-height: 22px;
+        height: 22px;
+      }
+      .lever label {
+        display: block;
+        font-weight: 700;
+        color: var(--ink);
+        font-size: 17px;
+        line-height: 1.4;
+      }
+      .lever small {
+        display: block;
+        font-size: 15px;
+        color: var(--note);
+        line-height: 1.5;
+        min-height: 3em;
+        margin-top: 2px;
+      }
+      .lever output {
+        display: block;
+        font-family: var(--num);
+        font-size: 40px;
+        font-weight: 600;
+        color: var(--blue-deep);
+        line-height: 1.1;
+        margin: 6px 0 4px;
+      }
+      .lever input {
+        width: 100%;
+        accent-color: var(--blue);
+        height: 28px;
+        margin: 0;
+      }
+      .result {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 6px 18px;
+        margin-top: 22px;
+        padding-top: 20px;
+        border-top: 1px solid var(--line);
+      }
+      .result .eq {
+        font-family: var(--num);
+        font-size: 34px;
+        font-weight: 600;
+        color: var(--ink);
+        line-height: 1;
+      }
+      .result .label {
+        font-weight: 700;
+        color: var(--ink);
+        font-size: 18px;
+      }
+      .result .big {
+        font-family: var(--num);
+        font-weight: 600;
+        font-size: 72px;
+        line-height: 1;
+        color: var(--verm);
+      }
+      .result .big span {
+        font-size: 34px;
+        margin-left: 2px;
+      }
+      .result .say {
+        flex: 1 1 260px;
+        font-size: 17px;
+        margin: 0;
+      }
+      .formula .fine {
+        font-size: 16px;
+        color: var(--note);
+        margin: 14px 0 0;
+        line-height: 1.7;
+      }
+
+      /* セクション共通 */
+      section {
+        padding: 72px 0;
+        scroll-margin-top: 12px;
+      }
+      section.band {
+        background: var(--band);
+      }
+      .kicker {
+        font-family: var(--num);
+        font-weight: 600;
+        font-size: 17px;
+        letter-spacing: 0.14em;
+        color: var(--blue-deep);
+        margin: 0 0 8px;
+        text-transform: uppercase;
+      }
+      section h2 {
+        font-family: var(--display);
+        font-weight: 900;
+        color: var(--ink);
+        font-size: clamp(27px, 3.6vw, 38px);
+        line-height: 1.4;
+        margin: 0 0 18px;
+      }
+      section h3 {
+        font-family: var(--display);
+        font-weight: 700;
+        color: var(--ink);
+        font-size: 24px;
+        line-height: 1.5;
+        margin: 0 0 10px;
+      }
+      .intro {
+        max-width: 44em;
+        margin-bottom: 32px;
+      }
+      .tag {
+        display: inline-block;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1;
+        padding: 7px 10px;
+        border-radius: 4px;
+        letter-spacing: 0.04em;
+      }
+      .tag.ai {
+        background: var(--blue);
+        color: #fff;
+      }
+      .tag.sales {
+        background: var(--verm-deep);
+        color: #fff;
+      }
+      .tag.t-fact {
+        background: var(--ink);
+        color: #fff;
+      }
+      .tag.t-guess {
+        background: #fff;
+        color: var(--ink);
+        border: 2px solid var(--ink);
+        padding: 5px 9px;
+      }
+
+      /* 結論 */
+      .answers {
+        display: grid;
+        gap: 18px;
+      }
+      .answer {
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        gap: 28px;
+        padding: 26px 28px;
+        border-radius: 12px;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-left: 8px solid var(--ink);
+      }
+      .answer.ai {
+        border-left-color: var(--blue);
+      }
+      .answer.sales {
+        border-left-color: var(--verm);
+      }
+      .answer .head {
+        word-break: keep-all;
+        overflow-wrap: anywhere;
+        font-family: var(--display);
+        font-weight: 900;
+        font-size: 25px;
+        line-height: 1.45;
+        color: var(--ink);
+      }
+      .answer .head .tag {
+        margin-bottom: 10px;
+      }
+      .answer p {
+        margin: 0;
+      }
+
+      /* 現在地 */
+      .facts {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin-bottom: 36px;
+      }
+      .fact {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 22px 22px 20px;
+      }
+      .fact .n {
+        font-family: var(--num);
+        font-weight: 600;
+        font-size: 54px;
+        line-height: 1;
+        color: var(--blue-deep);
+      }
+      .fact .n small {
+        font-family: var(--display);
+        font-size: 22px;
+        font-weight: 700;
+        margin-left: 2px;
+      }
+      .fact h3 {
+        font-size: 18px;
+        margin: 10px 0 4px;
+      }
+      .fact p {
+        font-size: 17px;
+        line-height: 1.75;
+        margin: 0;
+      }
+      .two {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+      }
+      .history {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border-left: 2px solid var(--ink);
+      }
+      .history li {
+        position: relative;
+        padding: 0 0 16px 22px;
+        line-height: 1.7;
+      }
+      .history li::before {
+        content: "";
+        position: absolute;
+        left: -7px;
+        top: 11px;
+        width: 12px;
+        height: 6px;
+        border-radius: 3px;
+        background: var(--ink);
+      }
+      .history b {
+        font-family: var(--num);
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--blue-deep);
+        margin-right: 10px;
+        letter-spacing: 0.02em;
+      }
+      .channels {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .channels li {
+        padding: 12px 0;
+        border-bottom: 1px solid var(--line);
+        line-height: 1.7;
+      }
+      .channels li:first-child {
+        padding-top: 0;
+      }
+      .channels b {
+        display: block;
+        color: var(--ink);
+      }
+      .src {
+        font-size: 16px;
+        color: var(--note);
+        line-height: 1.7;
+      }
+
+      /* 伸びしろの表 */
+      .matrix {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        overflow: hidden;
+        background: var(--paper);
+      }
+      .mrow {
+        display: grid;
+        grid-template-columns: 1.15fr 1fr 1fr;
+        border-top: 1px solid var(--line);
+      }
+      .mrow:first-child {
+        border-top: 0;
+      }
+      .mrow > div {
+        padding: 20px 22px;
+      }
+      .mrow > div + div {
+        border-left: 1px solid var(--line);
+      }
+      .mhead > div {
+        background: var(--ink);
+        color: #fff;
+        font-weight: 700;
+        padding: 14px 22px;
+        font-size: 17px;
+      }
+      .mhead .c-ai {
+        background: var(--blue);
+      }
+      .mhead .c-sales {
+        background: var(--verm-deep);
+      }
+      .mrow h3 {
+        font-size: 20px;
+        margin: 0 0 6px;
+      }
+      .mrow h3 span {
+        font-family: var(--num);
+        font-size: 17px;
+        font-weight: 600;
+        color: var(--blue-deep);
+        letter-spacing: 0.08em;
+        display: block;
+        line-height: 1.3;
+      }
+      .mrow p {
+        font-size: 17px;
+        line-height: 1.8;
+        margin: 0;
+      }
+      .mrow ul {
+        margin: 0;
+        padding-left: 1.2em;
+        font-size: 17px;
+        line-height: 1.8;
+      }
+      .mrow .mlabel {
+        display: none;
+      }
+
+      /* 施策カード */
+      .plays {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+      .play {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-top: 6px solid var(--blue);
+        border-radius: 12px;
+        padding: 24px 24px 20px;
+        display: flex;
+        flex-direction: column;
+      }
+      .plays.sales .play {
+        border-top-color: var(--verm);
+      }
+      .play h3 {
+        font-size: 21px;
+        margin: 0 0 8px;
+      }
+      .play p {
+        font-size: 17px;
+        line-height: 1.85;
+        margin: 0 0 12px;
+      }
+      .play dl {
+        margin: auto 0 0;
+        padding-top: 12px;
+        border-top: 1px dashed var(--line);
+        font-size: 16px;
+        line-height: 1.7;
+      }
+      .play dt {
+        font-weight: 700;
+        color: var(--ink);
+        float: left;
+        clear: left;
+        width: 6.5em;
+      }
+      .play dd {
+        margin: 0 0 4px 6.5em;
+      }
+      .callout {
+        margin-top: 24px;
+        padding: 20px 24px;
+        border-radius: 12px;
+        background: var(--blue-wash);
+        border-left: 6px solid var(--blue);
+      }
+      .callout.warm {
+        background: var(--verm-wash);
+        border-left-color: var(--verm);
+      }
+      .callout p {
+        margin: 0;
+        font-size: 17px;
+        line-height: 1.85;
+      }
+      .callout p + p {
+        margin-top: 8px;
+      }
+
+      .fit {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 28px;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        overflow: hidden;
+        font-size: 17px;
+        line-height: 1.75;
+      }
+      .fit th,
+      .fit td {
+        text-align: left;
+        vertical-align: top;
+        padding: 16px 18px;
+        border-top: 1px solid var(--line);
+      }
+      .fit thead th {
+        background: var(--ink);
+        color: #fff;
+        border-top: 0;
+        font-size: 16px;
+      }
+      .fit tbody th {
+        color: var(--ink);
+        width: 24%;
+      }
+
+      .proof {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+        margin-top: 28px;
+      }
+      .proof div {
+        border-top: 3px solid var(--ink);
+        padding-top: 12px;
+      }
+      .proof b {
+        display: block;
+        font-family: var(--num);
+        font-weight: 600;
+        font-size: 44px;
+        line-height: 1.05;
+        color: var(--ink);
+      }
+      .proof b small {
+        font-family: var(--display);
+        font-size: 19px;
+        font-weight: 700;
+      }
+      .proof span {
+        display: block;
+        font-size: 16px;
+        line-height: 1.65;
+        margin-top: 6px;
+      }
+
+      /* 売り先 */
+      .targets {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        margin-bottom: 32px;
+      }
+      .target {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 20px;
+      }
+      .target h3 {
+        font-size: 19px;
+        margin: 0 0 6px;
+      }
+      .target p {
+        font-size: 17px;
+        line-height: 1.8;
+        margin: 0;
+      }
+      .target .why {
+        display: block;
+        margin-top: 8px;
+        font-size: 16px;
+        color: var(--note);
+        line-height: 1.65;
+      }
+
+      /* 90日 */
+      .steps {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+        counter-reset: s;
+      }
+      .steps li {
+        position: relative;
+        padding: 22px 20px 22px 22px;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-left-width: 0;
+      }
+      .steps li:first-child {
+        border-left-width: 1px;
+        border-radius: 12px 0 0 12px;
+      }
+      .steps li:last-child {
+        border-radius: 0 12px 12px 0;
+      }
+      .steps .when {
+        font-family: var(--num);
+        font-weight: 600;
+        font-size: 22px;
+        color: var(--verm-deep);
+        letter-spacing: 0.04em;
+        line-height: 1.2;
+      }
+      .steps h3 {
+        font-size: 20px;
+        margin: 4px 0 8px;
+      }
+      .steps p {
+        font-size: 17px;
+        line-height: 1.8;
+        margin: 0;
+      }
+
+      /* 確認事項 */
+      .asks {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 36px;
+      }
+      .asks li {
+        padding: 14px 0 14px 34px;
+        border-bottom: 1px solid var(--line);
+        position: relative;
+        line-height: 1.75;
+      }
+      .asks li::before {
+        content: "";
+        position: absolute;
+        left: 2px;
+        top: 20px;
+        width: 18px;
+        height: 18px;
+        border: 2px solid var(--ink);
+        border-radius: 4px;
+      }
+      .asks b {
+        color: var(--ink);
+      }
+
+      /* 出典・署名 */
+      .sources {
+        font-size: 16px;
+        line-height: 1.8;
+        color: var(--note);
+      }
+      .sources h3 {
+        font-size: 19px;
+        margin: 24px 0 8px;
+      }
+      .sources ul {
+        margin: 0;
+        padding-left: 1.2em;
+      }
+      .sources li {
+        margin-bottom: 4px;
+        word-break: break-word;
+      }
+      .sign {
+        margin-top: 40px;
+        padding-top: 24px;
+        border-top: 2px solid var(--ink);
+        color: var(--ink);
+        font-weight: 700;
+        line-height: 1.7;
+      }
+      .sign span {
+        display: block;
+        font-weight: 500;
+        color: var(--text);
+      }
+      footer {
+        padding: 28px 0 48px;
+        font-size: 16px;
+        color: var(--note);
+      }
+
+      /* モバイル */
+      @media (max-width: 900px) {
+        .levers {
+          grid-template-columns: 1fr 1fr;
+          gap: 18px 14px;
+        }
+        .lever:nth-child(3)::before {
+          display: none;
+        }
+        .lever small {
+          min-height: 0;
+        }
+        .facts,
+        .targets {
+          grid-template-columns: 1fr 1fr;
+        }
+        .proof {
+          grid-template-columns: 1fr 1fr;
+          gap: 22px 14px;
+        }
+        .steps {
+          grid-template-columns: 1fr 1fr;
+        }
+        .steps li {
+          border-left-width: 1px;
+          border-radius: 0;
+        }
+        .steps li:first-child,
+        .steps li:last-child {
+          border-radius: 0;
+        }
+      }
+      @media (max-width: 720px) {
+        body {
+          font-size: 17px;
+        }
+        .wrap {
+          padding: 0 18px;
+        }
+        .hero {
+          padding: 40px 0 40px;
+        }
+        .hero .lead {
+          font-size: 17px;
+        }
+        .top .wrap {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 2px;
+        }
+        section {
+          padding: 52px 0;
+        }
+        .formula {
+          padding: 22px 18px 20px;
+        }
+        .result .big {
+          font-size: 60px;
+        }
+        .answer {
+          grid-template-columns: 1fr;
+          gap: 10px;
+          padding: 22px 20px;
+        }
+        .answer .head {
+          font-size: 22px;
+        }
+        .facts,
+        .targets,
+        .two,
+        .plays,
+        .asks {
+          grid-template-columns: 1fr;
+        }
+        .two {
+          gap: 32px;
+        }
+        .mhead {
+          display: none;
+        }
+        .mrow {
+          grid-template-columns: 1fr;
+        }
+        .mrow > div + div {
+          border-left: 0;
+          border-top: 1px dashed var(--line);
+        }
+        .mrow .mlabel {
+          display: inline-block;
+          margin-bottom: 8px;
+        }
+        .steps {
+          grid-template-columns: 1fr;
+        }
+        .fit,
+        .fit tbody,
+        .fit tr,
+        .fit th,
+        .fit td {
+          display: block;
+          width: 100%;
+        }
+        .fit thead {
+          display: none;
+        }
+        .fit tbody th {
+          width: 100%;
+          padding-bottom: 0;
+          font-size: 18px;
+        }
+        .fit td {
+          border-top: 0;
+          padding-top: 6px;
+        }
+        .fit td[data-l]::before {
+          content: attr(data-l) "：";
+          font-weight: 700;
+          color: var(--ink);
+        }
+      }
+      @media (max-width: 720px) {
+        .levers {
+          grid-template-columns: 1fr;
+          gap: 22px;
+        }
+        .lever {
+          display: grid;
+          grid-template-columns: 1fr auto;
+          column-gap: 12px;
+          align-items: center;
+        }
+        .lever label {
+          grid-column: 1;
+        }
+        .lever small {
+          grid-column: 1;
+        }
+        .lever output {
+          grid-column: 2;
+          grid-row: 1 / span 2;
+          margin: 0;
+        }
+        .lever input {
+          grid-column: 1 / -1;
+          margin-top: 8px;
+        }
+        .lever + .lever::before,
+        .lever:nth-child(3)::before {
+          display: block;
+          left: 50%;
+          top: -11px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="spine" aria-label="このページの目次">
+      <ol>
+        <li><a href="#ketsuron">結論</a></li>
+        <li><a href="#genzaichi">現在地</a></li>
+        <li><a href="#nobishiro">伸びしろ</a></li>
+        <li><a href="#ai">生成AI活用支援</a></li>
+        <li><a href="#sales">営業支援</a></li>
+        <li><a href="#susumekata">最初の90日</a></li>
+        <li><a href="#kakunin">お聞きしたいこと</a></li>
+        <li><a href="#shutten">出典と注記</a></li>
+      </ol>
+    </nav>
+
+    <header class="top">
+      <div class="wrap">
+        <b>株式会社コミクス</b>
+        <span>2026年11月12日 作成｜公開情報にもとづく論点整理</span>
+      </div>
+    </header>
+
+    <main>
+      <div class="hero">
+        <div class="wrap">
+          <p class="to">株式会社ボディスプラウト 御中</p>
+          <h1>
+            EC事業の売上を、<br /><em>いまある資産</em>で伸ばすための論点整理
+          </h1>
+          <p class="lead">
+            治療院から生まれた商品、累計68万枚の実績、テレビや雑誌での露出。貴社にはすでに「売れる理由」が揃っています。このレポートは、その資産を売上に変える道筋を、生成AI活用支援と営業支援の2つの視点から整理したものです。
+          </p>
+
+          <div class="formula" aria-labelledby="f-title">
+            <h2 id="f-title">ECの売上は、4つの掛け算で決まります</h2>
+            <p>
+              どれか1つを大きく伸ばすより、4つを少しずつ整えるほうが効きます。つまみを動かして確かめてみてください。
+            </p>
+            <div class="levers">
+              <div class="lever">
+                <label for="l1">来てもらう人数</label>
+                <small>検索、AI検索、SNS、テレビ・雑誌からの来訪</small>
+                <output id="o1" for="l1">+10%</output>
+                <input
+                  type="range"
+                  id="l1"
+                  min="0"
+                  max="30"
+                  step="1"
+                  value="10"
+                  aria-label="来てもらう人数の改善率"
+                />
+              </div>
+              <div class="lever">
+                <label for="l2">買ってくれる割合</label>
+                <small>商品ページ、レビュー、サイズ選びの安心</small>
+                <output id="o2" for="l2">+10%</output>
+                <input
+                  type="range"
+                  id="l2"
+                  min="0"
+                  max="30"
+                  step="1"
+                  value="10"
+                  aria-label="買ってくれる割合の改善率"
+                />
+              </div>
+              <div class="lever">
+                <label for="l3">1回の購入金額</label>
+                <small>洗い替えのセット、家族分、贈りもの</small>
+                <output id="o3" for="l3">+10%</output>
+                <input
+                  type="range"
+                  id="l3"
+                  min="0"
+                  max="30"
+                  step="1"
+                  value="10"
+                  aria-label="1回の購入金額の改善率"
+                />
+              </div>
+              <div class="lever">
+                <label for="l4">買ってくれる回数</label>
+                <small>買い替えの案内、定期コース、会員ランク</small>
+                <output id="o4" for="l4">+10%</output>
+                <input
+                  type="range"
+                  id="l4"
+                  min="0"
+                  max="30"
+                  step="1"
+                  value="10"
+                  aria-label="買ってくれる回数の改善率"
+                />
+              </div>
+            </div>
+            <div class="result" aria-live="polite">
+              <span class="eq">=</span>
+              <span class="label">売上</span>
+              <span class="big" id="total">+46<span>%</span></span>
+              <p class="say" id="say">
+                4つを10%ずつ整えると、足し算の40%ではなく、掛け算で46%の伸びになります。
+              </p>
+            </div>
+            <p class="fine">
+              説明用の計算です。貴社の実数にもとづく試算ではなく、効果を保証するものでもありません。ここに「法人・提携という新しい売り先」が足し算で加わります。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <section id="ketsuron" class="band">
+        <div class="wrap">
+          <p class="kicker">Summary</p>
+          <h2>結論：足りないのは資産ではなく「手数」と「売り先」</h2>
+          <div class="answers">
+            <div class="answer">
+              <div class="head">当社の見立て</div>
+              <p>
+                専門家が監修した商品、特許、累計販売枚数、メディア露出、複数の販路。売るための材料はすでにあります。伸びしろは、その材料を<strong>売り場ごと・お客様ごとに使い切る手数</strong>と、<strong>ECの外にある売り先</strong>の2つにあると当社は見ています（公開情報からの推定です）。
+              </p>
+            </div>
+            <div class="answer ai">
+              <div class="head">
+                <span class="tag ai">生成AI活用支援</span
+                ><br />いまの人数で、手数を増やす
+              </div>
+              <p>
+                商品ページの作り分け、お客様の声の分析、LINE配信の出し分け、問い合わせ対応、代表の専門知の発信、販路別の数字の見える化。人を増やさずに回せる形へ、貴社の担当の方と一緒に組み立てます。
+              </p>
+            </div>
+            <div class="answer sales">
+              <div class="head">
+                <span class="tag sales">営業支援</span
+                ><br />ECの外に、売り先をつくる
+              </div>
+              <p>
+                福利厚生でのまとめ買い、ゴルフ・フィットネス・産後ケアなど相性のよい業界との提携。1件ずつ買っていただくECに、法人の決裁者への直接のご紹介で「まとまって動く売上」を足します。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="genzaichi">
+        <div class="wrap">
+          <p class="kicker">Where you stand</p>
+          <h2>現在地：公開情報で確認できたこと</h2>
+          <p class="intro">
+            <span class="tag t-fact">確認できた事実</span
+            >　貴社のサイト、公式ストア、プレスリリース、各モールを2026年11月12日に閲覧して確認した内容です。売上や会員数など、公開されていない数字は扱っていません。
+          </p>
+
+          <div class="facts">
+            <div class="fact">
+              <div class="n">68<small>万枚</small></div>
+              <h3>「はくだけ整体」シリーズ累計</h3>
+              <p>
+                2026年9月時点。姿勢の専門家が監修し、公式ストアは「特許取得の骨盤ケア」を掲げています。
+              </p>
+            </div>
+            <div class="fact">
+              <div class="n">20<small>年</small></div>
+              <h3>治療院の現場から</h3>
+              <p>
+                2006年に整骨院を開院。施術の知見がそのまま商品開発と発信の裏づけになっています。
+              </p>
+            </div>
+            <div class="fact">
+              <div class="n">5<small>販路以上</small></div>
+              <h3>売り場の広がり</h3>
+              <p>
+                公式ストア、楽天市場、Yahoo!ショッピング、家電量販のEC、テレビ通販・カタログ通販など。
+              </p>
+            </div>
+          </div>
+
+          <div class="two">
+            <div>
+              <h3>歩み</h3>
+              <ul class="history">
+                <li><b>2006</b>宮前まちの整骨院・鍼灸マッサージ院を開院</li>
+                <li><b>2015</b>会社設立</li>
+                <li><b>2016</b>通販事業「のびのび健康生活」を開始</li>
+                <li><b>2017</b>整体ショーツを発売</li>
+                <li><b>2019</b>整体パンツZEROを発売</li>
+                <li><b>2020</b>整体パンツNEW ZEROの海外展開を開始</li>
+                <li><b>2022</b>台湾に現地法人を設立</li>
+                <li><b>2024</b>ゴルフ向け「BX GOLF」を発売</li>
+                <li>
+                  <b>2026</b>整体シャツONEを先行販売ののち、10月に一般販売
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3>売るための土台</h3>
+              <ul class="channels">
+                <li>
+                  <b>商品</b
+                  >女性用・男性用・ゴルフ用・姿勢ケア用品まで幅広いライン。公式ストア掲載の価格は税込5,390円〜19,800円。
+                </li>
+                <li>
+                  <b>お客様との接点</b
+                  >定期コース（季節便）、ポイントと会員ランク（2026年11月16日にリニューアルの告知）、LINE公式アカウント、レビュー投稿でのポイント付与。
+                </li>
+                <li>
+                  <b>メディア</b
+                  >2026年7月のテレビ朝日「羽鳥慎一モーニングショー」をはじめ、情報番組・雑誌での紹介多数。代表の著書も複数。
+                </li>
+                <li>
+                  <b>取引先</b
+                  >テレビ通販、カタログ通販、家電量販、雑貨、ゴルフ専門の各社（会社概要に記載）。
+                </li>
+                <li>
+                  <b>体制</b
+                  >パート・在宅パートナーを含めて約70名。EC事業部があります。
+                </li>
+              </ul>
+            </div>
+          </div>
+          <p class="src" style="margin-top: 28px">
+            市場の背景：経済産業省の調査では、国内の物販系BtoC-EC市場は15兆2,194億円（前年比3.70%増）、EC化率は9.78%です（令和6年度
+            電子商取引に関する市場調査、2025年8月公表）。
+          </p>
+        </div>
+      </section>
+
+      <section id="nobishiro" class="band">
+        <div class="wrap">
+          <p class="kicker">Where to grow</p>
+          <h2>伸びしろ：5つの視点と、当社ができること</h2>
+          <p class="intro">
+            <span class="tag t-guess">当社の推定</span
+            >　ここからは、公開情報をもとにした当社の仮説です。貴社の実際の数字やご事情は、お話を伺って確かめたうえで優先順位を付け直します。
+          </p>
+
+          <div class="matrix">
+            <div class="mrow mhead">
+              <div>視点と、当社の見立て</div>
+              <div class="c-ai">生成AI活用支援でできること</div>
+              <div class="c-sales">営業支援でできること</div>
+            </div>
+            <div class="mrow">
+              <div>
+                <h3><span>LEVER 1</span>来てもらう人数</h3>
+                <p>
+                  テレビや書籍で名前を知る方は多い商品です。一方、「骨盤ケア
+                  ショーツ
+                  おすすめ」のような比較記事や、AI検索の回答に名前が出るかは別の勝負になります。
+                </p>
+              </div>
+              <div>
+                <span class="tag ai mlabel">生成AI活用支援</span>
+                <ul>
+                  <li>AI検索・比較記事での見え方を診断して直す</li>
+                  <li>代表の専門知を、記事とリリースで継続発信</li>
+                  <li>売り場ごとに商品名・説明文を作り分ける</li>
+                </ul>
+              </div>
+              <div>
+                <span class="tag sales mlabel">営業支援</span>
+                <ul>
+                  <li>相性のよい媒体・コミュニティの責任者をご紹介</li>
+                  <li>提携先の会員向け案内に載せてもらう交渉</li>
+                </ul>
+              </div>
+            </div>
+            <div class="mrow">
+              <div>
+                <h3><span>LEVER 2</span>買ってくれる割合</h3>
+                <p>
+                  身に着ける商品は、「自分のサイズはどれか」「本当に楽になるのか」が購入前の迷いになりやすい分野です。
+                </p>
+              </div>
+              <div>
+                <span class="tag ai mlabel">生成AI活用支援</span>
+                <ul>
+                  <li>レビューと問い合わせを分析し、迷いの理由を特定</li>
+                  <li>商品ページ・サイズ案内・FAQへ反映</li>
+                  <li>放送や掲載に合わせた専用ページをすばやく用意</li>
+                </ul>
+              </div>
+              <div>
+                <span class="tag sales mlabel">営業支援</span>
+                <ul>
+                  <li>法人や施設での導入の声を、商品ページの裏づけに</li>
+                </ul>
+              </div>
+            </div>
+            <div class="mrow">
+              <div>
+                <h3><span>LEVER 3</span>1回の購入金額</h3>
+                <p>
+                  毎日はくものなので洗い替えが要ります。整体シャツONEではセット割引を設けておられ、同じ考え方を主力商品へ広げる余地がありそうです。
+                </p>
+              </div>
+              <div>
+                <span class="tag ai mlabel">生成AI活用支援</span>
+                <ul>
+                  <li>購入履歴から「一緒に買われる組み合わせ」を整理</li>
+                  <li>セット・ギフトの案内文を複数つくり、反応を比べる</li>
+                </ul>
+              </div>
+              <div>
+                <span class="tag sales mlabel">営業支援</span>
+                <ul>
+                  <li>法人のまとめ買い、記念品・贈答での採用</li>
+                </ul>
+              </div>
+            </div>
+            <div class="mrow">
+              <div>
+                <h3><span>LEVER 4</span>買ってくれる回数</h3>
+                <p>
+                  定期コース、会員ランク、LINEという器はすでにあります。会員ランクのリニューアルは、買い替えの案内を作り込む好機です。
+                </p>
+              </div>
+              <div>
+                <span class="tag ai mlabel">生成AI活用支援</span>
+                <ul>
+                  <li>購入からの日数・季節・商品別に配信文を出し分ける</li>
+                  <li>配信ごとの反応を集計し、次の文面へ反映</li>
+                </ul>
+              </div>
+              <div>
+                <span class="tag sales mlabel">営業支援</span>
+                <ul>
+                  <li>福利厚生など、毎年続く法人契約の形をつくる</li>
+                </ul>
+              </div>
+            </div>
+            <div class="mrow">
+              <div>
+                <h3><span>LEVER 5</span>新しい売り先</h3>
+                <p>
+                  テレビ通販や量販との取引実績は豊富です。一方、法人の方が相談する専用の窓口や資料は、サイト上では見当たりませんでした。
+                </p>
+              </div>
+              <div>
+                <span class="tag ai mlabel">生成AI活用支援</span>
+                <ul>
+                  <li>法人向けの案内ページ・取引条件の資料を作成</li>
+                  <li>台湾向けの商品説明の翻訳と言い回しの調整</li>
+                </ul>
+              </div>
+              <div>
+                <span class="tag sales mlabel">営業支援</span>
+                <ul>
+                  <li>売り先候補の決裁者へ直接おつなぎする</li>
+                  <li>商談の結果を記録し、次の売り先の仮説へ</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="ai">
+        <div class="wrap">
+          <p class="kicker">Generative AI</p>
+          <h2>
+            <span class="tag ai">生成AI活用支援</span
+            ><br />いまの人数で、手数を増やす7つの打ち手
+          </h2>
+          <p class="intro">
+            道具を入れて終わりにせず、貴社の業務の中で実際に回るところまで一緒に作ります。どの打ち手も「AIに任せる部分」と「人が決める部分」を先に分けます。
+          </p>
+
+          <div class="plays">
+            <div class="play">
+              <h3>売り場ごとに商品ページを作り分ける</h3>
+              <p>
+                同じ商品でも、公式ストア・楽天市場・Yahoo!ショッピングでは、探され方も読まれ方も違います。商品の特長とお客様の言葉をもとに、売り場別の商品名・説明文・画像内の文言の案を短時間で作り、反応を見て入れ替えます。
+              </p>
+              <dl>
+                <dt>人が決める</dt>
+                <dd>訴求の方針、最終の表現</dd>
+                <dt>測る数字</dt>
+                <dd>商品ページごとの購入率</dd>
+              </dl>
+            </div>
+            <div class="play">
+              <h3>お客様の声を、まとめて読む</h3>
+              <p>
+                レビュー、問い合わせ、返品・交換の理由を集めて分類し、「買う前に迷った点」「買ったあとに喜ばれた点」を一覧にします。商品ページとサイズ案内の改善、次の商品企画の材料になります。
+              </p>
+              <dl>
+                <dt>人が決める</dt>
+                <dd>どの声から直すかの優先順位</dd>
+                <dt>測る数字</dt>
+                <dd>サイズ交換の件数、購入率</dd>
+              </dl>
+            </div>
+            <div class="play">
+              <h3>LINEと会員向けの案内を出し分ける</h3>
+              <p>
+                全員に同じ文面を送るのをやめ、購入した商品・購入からの日数・季節に合わせて文面を変えます。夏用・冬用の季節商品や定期コースへのご案内も、対象を絞って届けます。
+              </p>
+              <dl>
+                <dt>人が決める</dt>
+                <dd>配信の頻度と、送らない相手</dd>
+                <dt>測る数字</dt>
+                <dd>2回目購入までの日数、再購入率</dd>
+              </dl>
+            </div>
+            <div class="play">
+              <h3>問い合わせの一次回答を下書きする</h3>
+              <p>
+                サイズ選び、洗い方、交換の手続きなど、繰り返し届く質問への回答案をAIが用意し、担当の方が確認して送ります。よくある質問はFAQに反映し、問い合わせそのものを減らします。
+              </p>
+              <dl>
+                <dt>人が決める</dt>
+                <dd>回答の確認と送信、例外の対応</dd>
+                <dt>測る数字</dt>
+                <dd>1件あたりの対応時間</dd>
+              </dl>
+            </div>
+            <div class="play">
+              <h3>AI検索と比較記事での見え方を整える</h3>
+              <p>
+                ChatGPTなどのAIに商品を尋ねる方が増えています。当社の診断ツール「LLMOアナライザー」でサイトを7カテゴリ・100点満点で診断し、優先して直す項目を指示書にして、改善後に再診断します。
+              </p>
+              <dl>
+                <dt>人が決める</dt>
+                <dd>直す項目の採否</dd>
+                <dt>測る数字</dt>
+                <dd>診断スコア、指名検索の件数</dd>
+              </dl>
+            </div>
+            <div class="play">
+              <h3>代表の専門知を、止まらない発信に変える</h3>
+              <p>
+                小林代表の施術の知見と著書は、他社が真似できない発信の源です。人が担うのを「テーマ決定」と「原稿確認」の2つに絞り、記事やプレスリリースの文面づくりを半自動にします。
+              </p>
+              <dl>
+                <dt>人が決める</dt>
+                <dd>テーマと、原稿の最終確認</dd>
+                <dt>測る数字</dt>
+                <dd>公開本数、記事経由の来訪と購入</dd>
+              </dl>
+            </div>
+            <div class="play" style="grid-column: 1/-1">
+              <h3>販路別の数字を、1つの画面で見る</h3>
+              <p>
+                公式ストア、各モール、卸、広告、LINE。数字が別々の管理画面に分かれていると、どこに手を打つべきかの判断が遅れます。経営者ご自身の手で、販路別の売上と上の4つの掛け算を1画面で追える「AI経営＆マーケティングダッシュボード」を構築するところまで伴走します。
+              </p>
+              <dl>
+                <dt>人が決める</dt>
+                <dd>見る指標と、週次で打つ手</dd>
+                <dt>測る数字</dt>
+                <dd>販路別の売上・購入率・再購入率</dd>
+              </dl>
+            </div>
+          </div>
+
+          <div class="callout">
+            <p>
+              <strong>表現の確認について。</strong
+              >身体や健康に関わる商品の説明は、景品表示法などの決まりに沿った言い回しが欠かせません。AIには一次点検までを任せ、最終の判断は必ず人が行う流れを最初に決めます。
+            </p>
+          </div>
+
+          <table class="fit">
+            <thead>
+              <tr>
+                <th>どなたと進めるか</th>
+                <th>当社の支援の形</th>
+                <th>内容</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>小林代表ご本人</th>
+                <td data-l="支援の形">
+                  生成AI活用顧問／AI経営＆マーケティングダッシュボード構築
+                </td>
+                <td data-l="内容">
+                  代表の鈴木とCIOの橋本が伴走します。課題の整理、優先順位付け、実践、改善をマンツーマンで進めます。
+                </td>
+              </tr>
+              <tr>
+                <th>EC事業部のみなさま</th>
+                <td data-l="支援の形">生成AI活用支援パック</td>
+                <td data-l="内容">
+                  業務の棚卸しから、活用のレクチャー、自動化までを共同で実施します。システム連携や個別の開発が要る場合は、当社が作業を担う形もあります。
+                </td>
+              </tr>
+              <tr>
+                <th>発信・広報</th>
+                <td data-l="支援の形">
+                  note発信の半自動化／PR TIMES配信の半自動化／LLMOアナライザー
+                </td>
+                <td data-l="内容">
+                  現状確認、少数での試行、運用の定着の順に進めます。
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="proof">
+            <div>
+              <b>304<small>社</small></b
+              ><span>生成AI活用の支援実績（2026年9月末現在）</span>
+            </div>
+            <div>
+              <b>88<small>人</small></b
+              ><span>生成AI活用顧問を導入された経営者（同）</span>
+            </div>
+            <div>
+              <b>215<small>記事</small></b
+              ><span
+                >当社が2か月で公開したnote記事。問い合わせは84件（2026年8〜9月）</span
+              >
+            </div>
+            <div>
+              <b>15.4<small>人分</small></b
+              ><span
+                >当社代表1人の1週間の生産能力を実測した値（2026年7〜8月）</span
+              >
+            </div>
+          </div>
+          <p class="src" style="margin-top: 14px">
+            15.4人分は生産能力の実測値であり、成果を保証するものではありません。LLMOアナライザーは、AIの回答への掲載や順位を保証するものではありません。
+          </p>
+        </div>
+      </section>
+
+      <section id="sales" class="band">
+        <div class="wrap">
+          <p class="kicker">Sales support</p>
+          <h2>
+            <span class="tag sales">営業支援</span
+            ><br />ECの外に、売り先をつくる
+          </h2>
+          <p class="intro">
+            ECは1人のお客様に1件ずつ買っていただく商売です。そこへ、法人や提携先を通じて「まとまって動く売上」を足します。当社は、担当者ではなく決裁者に直接おつなぎすることを得意にしています。
+          </p>
+
+          <h3>相性がよいと考える売り先（当社の仮説）</h3>
+          <div class="targets" style="margin-top: 14px">
+            <div class="target">
+              <h3>健康経営に取り組む企業</h3>
+              <p>
+                座り仕事や立ち仕事の多い会社で、従業員向けの福利厚生や社内販売として。
+              </p>
+              <span class="why"
+                >腰や姿勢の悩みは職種を問わず多く、毎年続く契約にしやすい分野です。</span
+              >
+            </div>
+            <div class="target">
+              <h3>ゴルフ場・ゴルフ関連の事業者</h3>
+              <p>
+                BX
+                GOLFを、会員向けの案内、コンペの賞品、ショップでの取り扱いに。
+              </p>
+              <span class="why"
+                >ゴルフ専門の取引先と専門誌での掲載実績がすでにあります。</span
+              >
+            </div>
+            <div class="target">
+              <h3>フィットネス・ヨガ・パーソナルジム</h3>
+              <p>会員への物販と、トレーナーからの推薦という形で。</p>
+              <span class="why"
+                >身体への関心が高い方が集まり、専門家の一言が購入を後押しします。</span
+              >
+            </div>
+            <div class="target">
+              <h3>産後ケア・ベビー関連の事業者</h3>
+              <p>産院、産後ケア施設、ベビー用品の会社との提携や同梱で。</p>
+              <span class="why"
+                >産後の方へ商品を届ける取り組みの実績をお持ちです。</span
+              >
+            </div>
+            <div class="target">
+              <h3>治療院のネットワーク</h3>
+              <p>
+                貴社のFC、コンサルティング先、協会の会員院での取り扱いを仕組みに。
+              </p>
+              <span class="why"
+                >施術者が勧める商品は、説明の手間なく選ばれます。</span
+              >
+            </div>
+            <div class="target">
+              <h3>贈答・記念品を扱う会社</h3>
+              <p>
+                周年記念、株主優待、永年勤続の記念品など、法人の贈りものとして。
+              </p>
+              <span class="why"
+                >「健康を贈る」という切り口は、既存のギフトと競合しにくい選択肢です。</span
+              >
+            </div>
+          </div>
+
+          <div class="plays sales">
+            <div class="play">
+              <h3>決裁者へ直接おつなぎする</h3>
+              <p>
+                売り先の仮説ごとに、当社のネットワークから該当する会社の経営者・役員をご紹介します。経営戦略の打ち合わせ、相互紹介、会食の設定まで当社が段取りします（bondプレミアム）。
+              </p>
+              <dl>
+                <dt>測る数字</dt>
+                <dd>ご紹介数、商談数、取引開始数</dd>
+              </dl>
+            </div>
+            <div class="play">
+              <h3>経営者が集まる場に入っていただく</h3>
+              <p>
+                取締役限定の経営者会食（月10回・各10〜15名）へ優先的にご参加いただけます。経営のご相談は24時間365日お受けします（鈴木顧問light）。商品を実際に手に取ってもらえる場にもなります。
+              </p>
+              <dl>
+                <dt>測る数字</dt>
+                <dd>新しく接点ができた経営者の数</dd>
+              </dl>
+            </div>
+            <div class="play">
+              <h3>法人の受け皿を先に整える</h3>
+              <p>
+                ご紹介しても、法人向けの取引条件や資料がなければ商談は進みません。まとめ買いの条件表、法人向けの紹介資料、専用の問い合わせ窓口を、生成AIを使って短期間で用意します。2つの支援がつながる部分です。
+              </p>
+              <dl>
+                <dt>測る数字</dt>
+                <dd>法人からの問い合わせ件数</dd>
+              </dl>
+            </div>
+            <div class="play">
+              <h3>手が足りないときは、プロ人材を</h3>
+              <p>
+                モール運用、広告運用、会員向け施策の経験者が必要な場合は、当社のプロ人材紹介（デジパラ）から即戦力をご提案できます。登録は約15万人、最短3営業日でご提案します（稼働開始までは約3週間）。
+              </p>
+              <dl>
+                <dt>測る数字</dt>
+                <dd>担当業務の成果指標</dd>
+              </dl>
+            </div>
+          </div>
+
+          <div class="proof">
+            <div>
+              <b>43,000<small>社以上</small></b
+              ><span>当社からアプローチできる企業（2026年10月現在）</span>
+            </div>
+            <div>
+              <b>35,000<small>人以上</small></b
+              ><span>つながりのある経営者（同）</span>
+            </div>
+            <div>
+              <b>1,852<small>社</small></b
+              ><span>当社の取引実績（2026年9月末現在）</span>
+            </div>
+            <div>
+              <b>7<small>社創業</small></b
+              ><span>代表・鈴木章裕の起業経験。うち4社をEXIT</span>
+            </div>
+          </div>
+          <div class="callout warm">
+            <p>
+              ご紹介は、商談の成立や受注を保証するものではありません。売り先の仮説は、貴社の利益率や供給体制を伺ったうえで絞り込みます。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="susumekata">
+        <div class="wrap">
+          <p class="kicker">First 90 days</p>
+          <h2>最初の90日：小さく試し、数字で比べる</h2>
+          <p class="intro">
+            一度に全部は始めません。効果を測れる範囲で試し、続ける価値があるものだけを残します。
+          </p>
+          <ol class="steps">
+            <li>
+              <div class="when">1〜2週目</div>
+              <h3>選ぶ</h3>
+              <p>
+                販路別の売上と、4つの掛け算の現状を確認します。生成AIで取り組む業務を3つ、営業支援で当たる売り先を3つに絞ります。
+              </p>
+            </li>
+            <li>
+              <div class="when">3〜6週目</div>
+              <h3>試す</h3>
+              <p>
+                主力商品の商品ページの作り分け、LINE配信の出し分け、法人向け資料の作成を実際に行います。並行して決裁者へのご紹介を始めます。
+              </p>
+            </li>
+            <li>
+              <div class="when">7〜10週目</div>
+              <h3>比べる</h3>
+              <p>
+                作業時間、件数、購入率を導入の前後で比べます。法人は商談の結果を記録し、売り先の仮説を見直します。
+              </p>
+            </li>
+            <li>
+              <div class="when">11〜13週目</div>
+              <h3>残す</h3>
+              <p>
+                効果のあったものを日々の業務に組み込み、担当の方だけで回せる状態にします。次の3か月の対象を決めます。
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="kakunin" class="band">
+        <div class="wrap">
+          <p class="kicker">Questions</p>
+          <h2>次にお聞きしたいこと</h2>
+          <p class="intro">
+            ここまでの内容は公開情報からの仮説です。次の点を伺えれば、打ち手の優先順位と、見込める効果の幅を具体的にお出しできます。
+          </p>
+          <ul class="asks">
+            <li>
+              <b>販路別の売上の割合</b
+              ><br />公式ストア、各モール、卸・通販会社、海外のおおよその比率
+            </li>
+            <li>
+              <b>公式ストアの基本の数字</b
+              ><br />月間の来訪数、購入率、平均の購入金額
+            </li>
+            <li>
+              <b>リピートの状況</b
+              ><br />2回目を買う方の割合、定期コースの会員数、LINEの登録者数
+            </li>
+            <li><b>EC事業部の体制</b><br />人数と役割、外部に任せている業務</li>
+            <li>
+              <b>広告と販促</b><br />月の予算、いま効いている施策と止めた施策
+            </li>
+            <li>
+              <b>法人との取引</b
+              ><br />卸の条件、まとめ買いの実績、断っている引き合いの有無
+            </li>
+            <li>
+              <b>台湾・海外の状況</b><br />現地での売り場と、今後の位置づけ
+            </li>
+            <li>
+              <b>今期の優先テーマ</b
+              ><br />新商品、既存商品の深掘り、新しい販路のどれを最も重く見ているか
+            </li>
+          </ul>
+
+          <p class="sign">鈴木章裕<span>株式会社コミクス 代表取締役</span></p>
+        </div>
+      </section>
+
+      <section id="shutten">
+        <div class="wrap sources">
+          <p class="kicker">Sources</p>
+          <h2>出典と注記</h2>
+          <p>
+            このレポートは、2026年11月12日時点で公開されている情報をもとに、株式会社コミクスが作成しました。貴社の課題や伸びしろに関する記述は、公開情報からの当社の推定であり、事実と異なる場合があります。記載の数値・効果は将来の成果を保証するものではありません。
+          </p>
+
+          <h3>株式会社ボディスプラウト様に関する情報</h3>
+          <ul>
+            <li>
+              会社概要・沿革・主要取引先：<a
+                href="https://bodysprout.com/company/"
+                rel="noopener"
+                >bodysprout.com/company/</a
+              >
+            </li>
+            <li>
+              体制（約70名）：<a
+                href="https://bodysprout.com/recruit/"
+                rel="noopener"
+                >bodysprout.com/recruit/</a
+              >
+            </li>
+            <li>
+              お知らせ・メディア掲載：<a
+                href="https://bodysprout.com/news/"
+                rel="noopener"
+                >bodysprout.com/news/</a
+              >、<a href="https://bodysprout.com/media/" rel="noopener"
+                >bodysprout.com/media/</a
+              >
+            </li>
+            <li>
+              商品・価格・定期コース・会員ランク：<a
+                href="https://store.bodysprout.com/"
+                rel="noopener"
+                >公式オンラインストア</a
+              >（トップページ掲載分）
+            </li>
+            <li>
+              累計68万枚（2026年9月時点）、整体シャツONEの一般販売とセット価格：同社プレスリリース（<a
+                href="https://netshop.impress.co.jp/r/prtimes/items/000000070.000051180"
+                rel="noopener"
+                >ネットショップ担当者フォーラム掲載分</a
+              >）
+            </li>
+            <li>
+              楽天市場店：<a
+                href="https://www.rakuten.co.jp/bodysprout/"
+                rel="noopener"
+                >rakuten.co.jp/bodysprout/</a
+              >　Yahoo!ショッピング店：<a
+                href="https://store.shopping.yahoo.co.jp/bodysprout/"
+                rel="noopener"
+                >store.shopping.yahoo.co.jp/bodysprout/</a
+              >
+            </li>
+          </ul>
+
+          <h3>市場に関する情報</h3>
+          <ul>
+            <li>
+              経済産業省「令和6年度
+              電子商取引に関する市場調査」（2025年8月26日公表）：<a
+                href="https://www.meti.go.jp/press/2025/08/20250826005/20250826005.html"
+                rel="noopener"
+                >meti.go.jp</a
+              >
+            </li>
+          </ul>
+
+          <h3>株式会社コミクスに関する情報</h3>
+          <ul>
+            <li>
+              生成AI活用支援実績304社／生成AI活用顧問導入88人：コミクス「AI支援メニュー一覧」p6（2026年9月末現在）
+            </li>
+            <li>
+              取引実績1,852社、プロ人材約15万人・最短3営業日で人材提案：コミクス「デジパラ資料」p1・p4・p15〜p17（2026年9月末現在）
+            </li>
+            <li>
+              note
+              2か月で215記事公開、問い合わせ84件：「note発信半自動化支援」p2・p4〜p6（2026年8〜9月）
+            </li>
+            <li>
+              生産能力15.4人分（1週間の成果物689件＝人手換算759.8時間÷実投入49.5時間）：「生産性15.4人分
+              AI経営実測記録」2026年8月21日（測定2026年7月29日〜8月5日、換算係数は自社基準）
+            </li>
+            <li>
+              LLMOアナライザー（7カテゴリ・100点満点の診断）：「LLMOアナライザー
+              ご紹介資料」p2・p4・p7・p11
+            </li>
+            <li>
+              アプローチ可能43,000社以上／経営者との繋がり35,000人以上：「bondプレミアム詳細」p3（2026年10月現在）
+            </li>
+            <li>
+              経営者会食（月10回・10〜15名）：「鈴木顧問light
+              ご提案資料」p3・p5・p10
+            </li>
+            <li>
+              鈴木章裕の経歴（7社創業・4社EXIT）：「生成AI活用顧問
+              サービス概要」p1
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        © 株式会社コミクス（COMIX
+        Inc.）　このページは検索エンジンに登録されない設定で公開しています。
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var ids = ["l1", "l2", "l3", "l4"];
+        var total = document.getElementById("total"),
+          say = document.getElementById("say");
+        function calc() {
+          var mul = 1,
+            sum = 0,
+            vals = [];
+          ids.forEach(function (id, i) {
+            var v = parseInt(document.getElementById(id).value, 10) || 0;
+            vals.push(v);
+            mul *= 1 + v / 100;
+            sum += v;
+            document.getElementById("o" + (i + 1)).textContent = "+" + v + "%";
+          });
+          var up = Math.round((mul - 1) * 100);
+          total.innerHTML = "+" + up + "<span>%</span>";
+          var same = vals.every(function (v) {
+            return v === vals[0];
+          });
+          if (sum === 0) {
+            say.textContent =
+              "つまみを右へ動かすと、掛け算での伸びが表示されます。";
+          } else if (same) {
+            say.textContent =
+              "4つを" +
+              vals[0] +
+              "%ずつ整えると、足し算の" +
+              sum +
+              "%ではなく、掛け算で" +
+              up +
+              "%の伸びになります。";
+          } else {
+            say.textContent =
+              "足し算なら" +
+              sum +
+              "%のところ、掛け算では" +
+              up +
+              "%の伸びになります。";
+          }
+        }
+        ids.forEach(function (id) {
+          document.getElementById(id).addEventListener("input", calc);
+        });
+        calc();
+
+        var links = [].slice.call(document.querySelectorAll(".spine a"));
+        if ("IntersectionObserver" in window && links.length) {
+          var map = {};
+          links.forEach(function (a) {
+            map[a.getAttribute("href").slice(1)] = a;
+          });
+          var io = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (e) {
+                if (e.isIntersecting) {
+                  links.forEach(function (a) {
+                    a.removeAttribute("aria-current");
+                  });
+                  map[e.target.id].setAttribute("aria-current", "true");
+                }
+              });
+            },
+            { rootMargin: "-35% 0px -60% 0px" },
+          );
+          Object.keys(map).forEach(function (id) {
+            var s = document.getElementById(id);
+            if (s) io.observe(s);
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
